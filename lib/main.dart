@@ -48,7 +48,7 @@ class _InstaCloneHomeState extends State<InstaCloneHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      appBar: _index == 0 ? AppBar(
         title: Text(
           'Instagram',
           style: GoogleFonts.lobsterTwo(color: Colors.black, fontSize: 32),
@@ -71,7 +71,7 @@ class _InstaCloneHomeState extends State<InstaCloneHome> {
             },
           ),
         ],
-      ),
+      ) : null,
       body: InstaBody(index: _index),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _index, // 현재 어떤 인덱스가 수행 되는지 확인하기 위한 변수, 해당 인덱스를 활성화 해준다.
